@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "banners",
+  "collectionName": "advertiments",
   "info": {
-    "singularName": "banner",
-    "pluralName": "banners",
-    "displayName": "banner",
-    "description": ""
+    "singularName": "advertiment",
+    "pluralName": "advertiments",
+    "displayName": "advertiment"
   },
   "options": {
     "draftAndPublish": true
@@ -15,21 +14,17 @@
     "name": {
       "type": "string"
     },
-    "desc": {
-      "type": "string"
-    },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
-    "category": {
+    "desc": {
       "type": "string"
     }
   }

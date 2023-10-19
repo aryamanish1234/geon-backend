@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "banners",
+  "collectionName": "stories",
   "info": {
-    "singularName": "banner",
-    "pluralName": "banners",
-    "displayName": "banner",
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "story",
     "description": ""
   },
   "options": {
@@ -12,25 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "link": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
     },
-    "desc": {
-      "type": "string"
-    },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
+    "video": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "category": {
-      "type": "string"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
