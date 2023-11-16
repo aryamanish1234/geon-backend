@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ads2s",
+  "info": {
+    "singularName": "ads2",
+    "pluralName": "ads2s",
+    "displayName": "Ads2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

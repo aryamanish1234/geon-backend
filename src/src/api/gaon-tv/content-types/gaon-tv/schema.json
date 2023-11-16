@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gaon_tvs",
+  "info": {
+    "singularName": "gaon-tv",
+    "pluralName": "gaon-tvs",
+    "displayName": "Gaon-Tv"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

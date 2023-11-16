@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hindi_banners",
+  "info": {
+    "singularName": "hindi-banner",
+    "pluralName": "hindi-banners",
+    "displayName": "Hindi-Banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "HindiDescription": {
+      "type": "text"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

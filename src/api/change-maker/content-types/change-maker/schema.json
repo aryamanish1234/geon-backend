@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "change_makers",
+  "info": {
+    "singularName": "change-maker",
+    "pluralName": "change-makers",
+    "displayName": "Change-maker",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ads3s",
+  "info": {
+    "singularName": "ads3",
+    "pluralName": "ads3s",
+    "displayName": "Ads3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

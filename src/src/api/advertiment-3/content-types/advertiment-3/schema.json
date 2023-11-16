@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertiment_3s",
+  "info": {
+    "singularName": "advertiment-3",
+    "pluralName": "advertiment-3s",
+    "displayName": "Advertiment-3",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

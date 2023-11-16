@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "garden_farmings",
+  "info": {
+    "singularName": "garden-farming",
+    "pluralName": "garden-farmings",
+    "displayName": "Garden-Farming",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titlle": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "Main": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

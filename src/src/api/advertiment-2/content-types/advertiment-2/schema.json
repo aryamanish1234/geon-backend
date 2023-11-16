@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertiment_2s",
+  "info": {
+    "singularName": "advertiment-2",
+    "pluralName": "advertiment-2s",
+    "displayName": "Advertiment-2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

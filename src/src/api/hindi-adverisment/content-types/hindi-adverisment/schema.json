@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hindi_adverisments",
+  "info": {
+    "singularName": "hindi-adverisment",
+    "pluralName": "hindi-adverisments",
+    "displayName": "HindiAdverisment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "HindiDescription": {
+      "type": "string"
+    },
+    "Images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

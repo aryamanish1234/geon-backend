@@ -677,20 +677,91 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiAdvertimentAdvertiment extends Schema.CollectionType {
-  collectionName: 'advertiments';
+export interface ApiAddAdd extends Schema.CollectionType {
+  collectionName: 'adds';
   info: {
-    singularName: 'advertiment';
-    pluralName: 'advertiments';
-    displayName: 'advertiment';
+    singularName: 'add';
+    pluralName: 'adds';
+    displayName: 'Ads1';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
+    Title: Attribute.String;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::add.add', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::add.add', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAds2Ads2 extends Schema.CollectionType {
+  collectionName: 'ads2s';
+  info: {
+    singularName: 'ads2';
+    pluralName: 'ads2s';
+    displayName: 'Ads2';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
     image: Attribute.Media;
-    desc: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::ads2.ads2', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::ads2.ads2', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAds3Ads3 extends Schema.CollectionType {
+  collectionName: 'ads3s';
+  info: {
+    singularName: 'ads3';
+    pluralName: 'ads3s';
+    displayName: 'Ads3';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::ads3.ads3', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::ads3.ads3', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAdvertimentAdvertiment extends Schema.CollectionType {
+  collectionName: 'advertiments';
+  info: {
+    singularName: 'advertiment';
+    pluralName: 'advertiments';
+    displayName: 'Advertiment-1';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -709,12 +780,76 @@ export interface ApiAdvertimentAdvertiment extends Schema.CollectionType {
   };
 }
 
+export interface ApiAdvertiment2Advertiment2 extends Schema.CollectionType {
+  collectionName: 'advertiment_2s';
+  info: {
+    singularName: 'advertiment-2';
+    pluralName: 'advertiment-2s';
+    displayName: 'Advertiment-2';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    images: Attribute.Media;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::advertiment-2.advertiment-2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::advertiment-2.advertiment-2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAdvertiment3Advertiment3 extends Schema.CollectionType {
+  collectionName: 'advertiment_3s';
+  info: {
+    singularName: 'advertiment-3';
+    pluralName: 'advertiment-3s';
+    displayName: 'Advertiment-3';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    link: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::advertiment-3.advertiment-3',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::advertiment-3.advertiment-3',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBannerBanner extends Schema.CollectionType {
   collectionName: 'banners';
   info: {
     singularName: 'banner';
     pluralName: 'banners';
-    displayName: 'banner';
+    displayName: 'Banner';
     description: '';
   };
   options: {
@@ -743,27 +878,531 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
 }
 
-export interface ApiBlogBlog extends Schema.CollectionType {
-  collectionName: 'blogs';
+export interface ApiChallengeChallenge extends Schema.CollectionType {
+  collectionName: 'challenges';
   info: {
-    singularName: 'blog';
-    pluralName: 'blogs';
-    displayName: 'blog';
+    singularName: 'challenge';
+    pluralName: 'challenges';
+    displayName: 'Challenges';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    desc: Attribute.Text;
-    heading: Attribute.String;
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    Main: Attribute.Media;
+    Images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::challenge.challenge',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::challenge.challenge',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiChangeMakerChangeMaker extends Schema.CollectionType {
+  collectionName: 'change_makers';
+  info: {
+    singularName: 'change-maker';
+    pluralName: 'change-makers';
+    displayName: 'Change-maker';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    link: Attribute.String;
+    Images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::change-maker.change-maker',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::change-maker.change-maker',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDailyBlogDailyBlog extends Schema.CollectionType {
+  collectionName: 'daily_blogs';
+  info: {
+    singularName: 'daily-blog';
+    pluralName: 'daily-blogs';
+    displayName: 'Daily-blog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    images: Attribute.Media;
+    Main: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-blog.daily-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-blog.daily-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGaonTvGaonTv extends Schema.CollectionType {
+  collectionName: 'gaon_tvs';
+  info: {
+    singularName: 'gaon-tv';
+    pluralName: 'gaon-tvs';
+    displayName: 'Gaon-Tv';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    link: Attribute.String;
+    images: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gaon-tv.gaon-tv',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gaon-tv.gaon-tv',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGardenFarmingGardenFarming extends Schema.CollectionType {
+  collectionName: 'garden_farmings';
+  info: {
+    singularName: 'garden-farming';
+    pluralName: 'garden-farmings';
+    displayName: 'Garden-Farming';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Titlle: Attribute.String;
+    Desc: Attribute.RichText;
+    Main: Attribute.Media;
     images: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::garden-farming.garden-farming',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::garden-farming.garden-farming',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGeonPodecastGeonPodecast extends Schema.CollectionType {
+  collectionName: 'geon_podecasts';
+  info: {
+    singularName: 'geon-podecast';
+    pluralName: 'geon-podecasts';
+    displayName: 'Geon-podecast';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    image: Attribute.Media & Attribute.Required;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::geon-podecast.geon-podecast',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::geon-podecast.geon-podecast',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiAdverismentHindiAdverisment
+  extends Schema.CollectionType {
+  collectionName: 'hindi_adverisments';
+  info: {
+    singularName: 'hindi-adverisment';
+    pluralName: 'hindi-adverisments';
+    displayName: 'HindiAdverisment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    HindiDescription: Attribute.String;
+    Images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-adverisment.hindi-adverisment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-adverisment.hindi-adverisment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiBannerHindiBanner extends Schema.CollectionType {
+  collectionName: 'hindi_banners';
+  info: {
+    singularName: 'hindi-banner';
+    pluralName: 'hindi-banners';
+    displayName: 'Hindi-Banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    HindiDescription: Attribute.Text;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-banner.hindi-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-banner.hindi-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiBlogHindiBlog extends Schema.CollectionType {
+  collectionName: 'hindi_blogs';
+  info: {
+    singularName: 'hindi-blog';
+    pluralName: 'hindi-blogs';
+    displayName: 'HindiBlog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    HindiDescription: Attribute.Text;
+    images: Attribute.Media;
+    heading: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-blog.hindi-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-blog.hindi-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiChangeMakerHindiChangeMaker
+  extends Schema.CollectionType {
+  collectionName: 'hindi_change_makers';
+  info: {
+    singularName: 'hindi-change-maker';
+    pluralName: 'hindi-change-makers';
+    displayName: 'Hindi-change-maker';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    images: Attribute.Media;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-change-maker.hindi-change-maker',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-change-maker.hindi-change-maker',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiDailyLifeHindiDailyLife extends Schema.CollectionType {
+  collectionName: 'hindi_daily_lives';
+  info: {
+    singularName: 'hindi-daily-life';
+    pluralName: 'hindi-daily-lives';
+    displayName: 'Hindi-Daily-Blog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    Main: Attribute.Media;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-daily-life.hindi-daily-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-daily-life.hindi-daily-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiGardenFarmingHindiGardenFarming
+  extends Schema.CollectionType {
+  collectionName: 'hindi_garden_farmings';
+  info: {
+    singularName: 'hindi-garden-farming';
+    pluralName: 'hindi-garden-farmings';
+    displayName: 'Hindi-Garden-farming';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    Main: Attribute.Media;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-garden-farming.hindi-garden-farming',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-garden-farming.hindi-garden-farming',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiLifeHindiLife extends Schema.CollectionType {
+  collectionName: 'hindi_lives';
+  info: {
+    singularName: 'hindi-life';
+    pluralName: 'hindi-lives';
+    displayName: 'Hindi-life';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    images: Attribute.Media;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-life.hindi-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-life.hindi-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiManuFactureHindiManuFacture
+  extends Schema.CollectionType {
+  collectionName: 'hindi_manu_factures';
+  info: {
+    singularName: 'hindi-manu-facture';
+    pluralName: 'hindi-manu-factures';
+    displayName: 'Hindi-Manufacture';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    images: Attribute.Media;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-manu-facture.hindi-manu-facture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-manu-facture.hindi-manu-facture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHindiSocialLifeHindiSocialLife
+  extends Schema.CollectionType {
+  collectionName: 'hindi_social_lives';
+  info: {
+    singularName: 'hindi-social-life';
+    pluralName: 'hindi-social-lives';
+    displayName: 'Hindi-Social-life';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    Main: Attribute.Media;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hindi-social-life.hindi-social-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hindi-social-life.hindi-social-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLifeLife extends Schema.CollectionType {
+  collectionName: 'lives';
+  info: {
+    singularName: 'life';
+    pluralName: 'lives';
+    displayName: 'life';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    videos: Attribute.Media;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::life.life', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::life.life', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -773,7 +1412,8 @@ export interface ApiManufactureManufacture extends Schema.CollectionType {
   info: {
     singularName: 'manufacture';
     pluralName: 'manufactures';
-    displayName: 'manufacture';
+    displayName: 'Manufacture';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -783,6 +1423,7 @@ export interface ApiManufactureManufacture extends Schema.CollectionType {
     desc: Attribute.Text;
     images: Attribute.Media;
     title: Attribute.String;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -832,12 +1473,45 @@ export interface ApiReelsReels extends Schema.CollectionType {
   };
 }
 
+export interface ApiSocialLifeSocialLife extends Schema.CollectionType {
+  collectionName: 'social_lives';
+  info: {
+    singularName: 'social-life';
+    pluralName: 'social-lives';
+    displayName: 'social-life';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.RichText;
+    Mani: Attribute.Media;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-life.social-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-life.social-life',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiStoryStory extends Schema.CollectionType {
   collectionName: 'stories';
   info: {
     singularName: 'story';
     pluralName: 'stories';
-    displayName: 'story';
+    displayName: 'Story';
     description: '';
   };
   options: {
@@ -870,7 +1544,8 @@ export interface ApiStoryaudioStoryaudio extends Schema.CollectionType {
   info: {
     singularName: 'storyaudio';
     pluralName: 'storyaudi';
-    displayName: 'audio';
+    displayName: 'Audio';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -882,6 +1557,8 @@ export interface ApiStoryaudioStoryaudio extends Schema.CollectionType {
         maxLength: 50;
       }>;
     audio: Attribute.Media & Attribute.Required;
+    images: Attribute.Media & Attribute.Required;
+    Desc: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -893,37 +1570,6 @@ export interface ApiStoryaudioStoryaudio extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::storyaudio.storyaudio',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiVideosVideos extends Schema.CollectionType {
-  collectionName: 'video';
-  info: {
-    singularName: 'videos';
-    pluralName: 'video';
-    displayName: 'videos';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    video: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::videos.videos',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::videos.videos',
       'oneToOne',
       'admin::user'
     > &
@@ -947,14 +1593,34 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::add.add': ApiAddAdd;
+      'api::ads2.ads2': ApiAds2Ads2;
+      'api::ads3.ads3': ApiAds3Ads3;
       'api::advertiment.advertiment': ApiAdvertimentAdvertiment;
+      'api::advertiment-2.advertiment-2': ApiAdvertiment2Advertiment2;
+      'api::advertiment-3.advertiment-3': ApiAdvertiment3Advertiment3;
       'api::banner.banner': ApiBannerBanner;
-      'api::blog.blog': ApiBlogBlog;
+      'api::challenge.challenge': ApiChallengeChallenge;
+      'api::change-maker.change-maker': ApiChangeMakerChangeMaker;
+      'api::daily-blog.daily-blog': ApiDailyBlogDailyBlog;
+      'api::gaon-tv.gaon-tv': ApiGaonTvGaonTv;
+      'api::garden-farming.garden-farming': ApiGardenFarmingGardenFarming;
+      'api::geon-podecast.geon-podecast': ApiGeonPodecastGeonPodecast;
+      'api::hindi-adverisment.hindi-adverisment': ApiHindiAdverismentHindiAdverisment;
+      'api::hindi-banner.hindi-banner': ApiHindiBannerHindiBanner;
+      'api::hindi-blog.hindi-blog': ApiHindiBlogHindiBlog;
+      'api::hindi-change-maker.hindi-change-maker': ApiHindiChangeMakerHindiChangeMaker;
+      'api::hindi-daily-life.hindi-daily-life': ApiHindiDailyLifeHindiDailyLife;
+      'api::hindi-garden-farming.hindi-garden-farming': ApiHindiGardenFarmingHindiGardenFarming;
+      'api::hindi-life.hindi-life': ApiHindiLifeHindiLife;
+      'api::hindi-manu-facture.hindi-manu-facture': ApiHindiManuFactureHindiManuFacture;
+      'api::hindi-social-life.hindi-social-life': ApiHindiSocialLifeHindiSocialLife;
+      'api::life.life': ApiLifeLife;
       'api::manufacture.manufacture': ApiManufactureManufacture;
       'api::reels.reels': ApiReelsReels;
+      'api::social-life.social-life': ApiSocialLifeSocialLife;
       'api::story.story': ApiStoryStory;
       'api::storyaudio.storyaudio': ApiStoryaudioStoryaudio;
-      'api::videos.videos': ApiVideosVideos;
     }
   }
 }

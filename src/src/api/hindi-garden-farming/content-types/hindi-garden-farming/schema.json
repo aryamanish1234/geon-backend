@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hindi_garden_farmings",
+  "info": {
+    "singularName": "hindi-garden-farming",
+    "pluralName": "hindi-garden-farmings",
+    "displayName": "Hindi-Garden-farming"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "Main": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

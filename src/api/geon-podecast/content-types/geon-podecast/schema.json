@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "geon_podecasts",
+  "info": {
+    "singularName": "geon-podecast",
+    "pluralName": "geon-podecasts",
+    "displayName": "Geon-podecast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
